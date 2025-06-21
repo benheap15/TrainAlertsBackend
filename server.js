@@ -78,7 +78,7 @@ app.post('/send-test-notification', async (req, res) => {
 
 
 // --- Start the Server ---
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => { // <--- ADDED '0.0.0.0'
     console.log(`Backend server running on http://localhost:${PORT}`);
     console.log('Visit your Netlify frontend, subscribe, then hit /send-test-notification.');
 });
